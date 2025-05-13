@@ -1,0 +1,214 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f8f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-container {
+  padding: 2rem 1rem 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Custom comfort colors */
+/* :root {
+  --comfort-blue: #D3E4FD;
+  --comfort-green: #F2FCE2;
+  --comfort-purple: #E5DEFF;
+  --comfort-peach: #FDE1D3;
+  --comfort-yellow: #FEF7CD;
+  --comfort-neutral: #F1F0FB;
+} */
+:root {
+  --comfort-blue: #9dc1ed;      /* Was #D3E4FD */
+  --comfort-green: #d7f8ac;     /* Was #F2FCE2 */
+  --comfort-purple: #c1b2f7;    /* Was #E5DEFF */
+  --comfort-peach: #f7b285;     /* Was #FDE1D3 */
+  --comfort-yellow: #ffe772;    /* Was #FEF7CD */
+  --comfort-neutral: #bebcd0;   /* Was #F1F0FB */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseGentle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes scaleGentle {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-gentle {
+  animation: pulseGentle 3s ease-in-out infinite;
+}
+
+.animate-scale-gentle {
+  animation: scaleGentle 0.4s ease-out;
+}
+
+/* Background decorative elements */
+.bg-decoration {
+  position: fixed;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(3rem);
+}
+
+.bg-blue {
+  background-color: rgba(211, 228, 253, 0.1);
+  width: 40vh;
+  height: 40vh;
+  top: 10vh;
+  right: 10vw;
+}
+
+.bg-purple {
+  background-color: rgba(229, 222, 255, 0.1);
+  width: 60vh;
+  height: 60vh;
+  bottom: 5vh;
+  left: 5vw;
+}
+
+.bg-yellow {
+  background-color: rgba(254, 247, 205, 0.1);
+  width: 40vh;
+  height: 40vh;
+  top: 20vh;
+  left: 10vw;
+}
+
+/* Navigation styles */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out;
+}
+.top-nav {
+  position: fixed;
+  top: 0; /* Changed from bottom: 0 to top: 0 */
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out;
+}
+.nav-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(0.5rem);
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  gap: 0.25rem;
+}
+
+/* Resource cards */
+.resource-card {
+  transition: all 300ms;
+  overflow: hidden;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.resource-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-color-indicator {
+  height: 8px;
+  width: 100%;
+}
+
+.card-header {
+  padding: 1.25rem 1.25rem 0.75rem;
+}
+
+.card-content {
+  padding: 0 1.25rem 1rem;
+}
+
+.card-footer {
+  padding: 0.75rem 1.25rem 1.25rem;
+}
+
+/* Emergency section */
+.emergency-section {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: rgba(211, 228, 253, 0.1);
+  text-align: center;
+}

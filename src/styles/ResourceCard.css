@@ -1,0 +1,56 @@
+
+:root {
+  --comfort-blue: #D3E4FD;
+  --comfort-green: #F2FCE2;
+  --comfort-purple: #E5DEFF;
+  --comfort-yellow: #FEF7CD;
+  --comfort-peach: #FDE1D3;
+  --comfort-neutral: #F1F0FB;
+}
+
+.resource-card {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-color-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
+
+.card-header {
+  padding: 20px 20px 0;
+}
+
+.card-content {
+  padding: 16px 20px;
+}
+
+.card-footer {
+  padding: 0 20px 20px;
+}
+
+/* Animation for resource cards */
+.animate-scale-gentle {
+  animation: scaleGentle 0.5s ease-out forwards;
+}
+
+@keyframes scaleGentle {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
